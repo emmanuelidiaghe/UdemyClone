@@ -1,0 +1,41 @@
+--Udemy Database Queries
+create table users (
+	id int identity(1,1) not null,
+	first_name char(40) not null,
+	last_name char(40) not null,
+	course_id int not null,
+	email varchar(50) not null,
+	username varchar(30) not null,
+	passcode varchar(30) not null,
+	primary key(id),
+	foreign key(course_id) references courses(id)
+);
+
+create table courses (
+	id int identity(1,1) not null,
+    title varchar(100) not null,
+	image_url varchar(max) not null,
+	tutor char(40) not null,
+	rating int not null,
+	cost int not null,
+    primary key(id)
+);
+
+insert into users(first_name, last_name, course_id, email, username, passcode)
+values
+('Adekunle', 'Gold', 3, 'adekunlegold@gmail.com', 'adegold', 'ade400'),
+('Samuel', 'Adetula', 1, 'samueladetula@gmail.com', 'sammie', 'sammie102'),
+('Kemilola', 'Asemota', 1, 'kemiasemota@gmail.com', 'kemi', 'kemistry'),
+('Mohammed', 'Lawal', 2, 'mohamlawal@gmail.com', 'lawalmoh', 'lawal001'),
+('Kingsley', 'Godman', 3, 'kingman@gmail.com', 'kingman', 'king321');
+
+insert into courses(title, image_url, tutor, rating, cost)
+values
+('Complete C# Programming Course 2021 – Beginner to Expert', 'https://img-c.udemycdn.com/course/240x135/3236633_5f84_6.jpg', 'James Burger', 4, 18),
+('Learn C# By Building Applications', 'https://img-c.udemycdn.com/course/240x135/700300_7d6b_4.jpg', 'Kelly Handsome', 5, 10),
+('C# Programming for Beginners:Practical Applications Approach', 'https://img-c.udemycdn.com/course/240x135/1934462_164a.jpg', 'Nicki Minaj', 4, 22),
+('Be a Game Maker with GameMaker Studio 2', 'https://img-c.udemycdn.com/course/240x135/2181338_d508_23.jpg', 'Richard Young', 5, 5),
+('How to Make Tile Based Platform Games in Gamemaker Studio 2', 'https://img-c.udemycdn.com/course/240x135/1581488_e3e1_2.jpg', 'Wayne Khalid', 5, 11);
+
+
+select * from courses;
