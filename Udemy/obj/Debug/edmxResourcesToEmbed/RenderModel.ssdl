@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="udemyModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="udemyModelStoreContainer">
+    <EntitySet Name="courses" EntityType="udemyModel.Store.courses" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="users" EntityType="udemyModel.Store.users" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__users__course_id__46E78A0C" Association="udemyModel.Store.FK__users__course_id__46E78A0C">
+      <End Role="courses" EntitySet="courses" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="courses">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="image_url" Type="varchar(max)" Nullable="false" />
+    <Property Name="tutor" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="rating" Type="int" Nullable="false" />
+    <Property Name="cost" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="last_name" Type="char" Nullable="false" MaxLength="40" />
+    <Property Name="course_id" Type="int" Nullable="false" />
+    <Property Name="email" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="username" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="passcode" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <Association Name="FK__users__course_id__46E78A0C">
+    <End Role="courses" Type="udemyModel.Store.courses" Multiplicity="1" />
+    <End Role="users" Type="udemyModel.Store.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="courses">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="course_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

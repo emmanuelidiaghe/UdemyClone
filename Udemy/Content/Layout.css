@@ -1,0 +1,200 @@
+﻿﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
+.header a:hover {
+    color: blue;
+}
+
+.header-con {
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
+
+.header-top h5 {
+    font-style: normal;
+    font-weight: 900;
+    margin-top: 10px;
+}
+
+.header-top h3 {
+    margin-top: 10px;
+}
+
+.header-con div {
+    margin: 0 15px 0 15px;
+}
+
+.header-con h5 {
+    font-weight: normal;
+    /*font-size: 1rem;*/
+}
+
+#search-text-input {
+    padding: 17px;
+    padding-left: 55px;
+    width: 500px;
+    height: 10px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 13px;
+    color: black;
+    background-image: url('Images/search.png');
+    background-color: #fefcfc;
+    background-repeat: no-repeat;
+    background-position: left;
+    outline: 0;
+}
+
+.fav, .shopping-cart, .bell {
+    margin-top: 10px;
+    margin-left: auto;
+    width: 20px;
+    height: auto;
+}
+
+.profile {
+    border-radius: 50%;
+    background-color: black
+}
+
+.circle {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: smaller;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    color: white;
+}
+
+.circle p {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.head-mid {
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 120px;
+}
+
+.head-mid h5 {
+    margin-top: 0;
+}
+
+.header {
+    padding-top: 10px;
+    box-shadow: 0px 5px 10px #888888;
+}
+
+.main {
+    width: 90%;
+    margin: 0 90px;
+}
+
+.possibility {
+    height: 400px;
+    margin: 0 auto;
+    background-image: url('/Images/poss.jpg');
+}
+
+.poss-top {
+    padding: 20px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+    width: 30%;
+    background-color: white;
+}
+
+.cont1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont2 {
+    margin-top: 0;
+}
+
+.cont3 {
+    margin-top: 20px;
+}
+
+.learn {
+    text-decoration: underline;
+    color: blue;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+.cont1head1 {
+    font-size: 2rem;
+}
+
+.details {
+    padding: 10px;
+    width: 400px;
+    height: auto;
+    display: flex;
+    border: 1px solid;
+}
+
+.details img {
+    margin-right: 20px;
+}
+
+.courses {
+    width: 290px;
+}
+
+.course-details p {
+    line-height: 10px;
+}
+
+.top-pick {
+    display: flex;
+    border: 1px solid;
+    padding: 30px;
+}
+
+.pick-details {
+    margin-left: 25px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    min-height: calc(100vh - 220px);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.foot1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bot {
+    border: 2px solid;
+    padding: 10px;
+}

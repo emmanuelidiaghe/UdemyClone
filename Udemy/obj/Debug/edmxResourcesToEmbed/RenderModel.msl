@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="udemyModelStoreContainer" CdmEntityContainer="udemyEntities">
+    <EntitySetMapping Name="courses">
+      <EntityTypeMapping TypeName="udemyModel.cours">
+        <MappingFragment StoreEntitySet="courses">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="image_url" ColumnName="image_url" />
+          <ScalarProperty Name="tutor" ColumnName="tutor" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="udemyModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="course_id" ColumnName="course_id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="passcode" ColumnName="passcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
